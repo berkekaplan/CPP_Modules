@@ -15,18 +15,18 @@ int main(void)
     printWelcome();
     while (true)
     {   
-        std::getline(std::cin, command); // get the command from the user
-        if (command.compare("ADD") == 0) // compare the command with the string "ADD"
-            pb.addContact(); // if it's the same, call the addContact function
-        else if (command.compare("SEARCH") == 0) // compare the command with the string "SEARCH"
-            pb.searchContact(); // if it's the same, call the searchContact function
-        else if (command.compare("EXIT") == 0) // compare the command with the string "EXIT"
+        std::getline(std::cin, command);
+        if (command.compare("ADD") == 0)
+            pb.addContact();
+        else if (command.compare("SEARCH") == 0)
+            pb.searchContact();
+        else if (command.compare("EXIT") == 0)
         {
-            std::cout << "Goodbye!" << std::endl; // if it's the same, print "Goodbye!" and exit the program
+            std::cout << "Goodbye!" << std::endl;
             break ;
         }
         else
-            std::cout << "This command dosen't exist." << std::endl; // if it's not the same, print "This command dosen't exist."
+            std::cout << "This command dosen't exist." << std::endl;
     }
     return (0);
 }

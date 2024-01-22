@@ -87,7 +87,6 @@ int PhoneBook::searchContact(void)
     if (i <= 0 || i > 8)
     {
         std::cout << "Wrong input!" << std::endl;
-        std::cin.clear();
         std::cin.ignore();
     }
     else
@@ -119,12 +118,12 @@ void PhoneBook::printAllContact(void) const
     std::cout << std::setw(10) << "Nickname" << "|" << std::endl;
     std::cout << "──────────────────────────────────────────────────────" << std::endl;
 
-    for (int i = 1; i <= contactNum_; i++)
+    for (int i = 0; i < contactNum_; i++)
     {
-        std::cout << std::setw(10) << i << "|";
-        std::cout << std::setw(10) << cutLettersToTen(contact[i - 1].getFirstName()) << "|";
-        std::cout << std::setw(10) << cutLettersToTen(contact[i - 1].getLastName()) << "|";
-        std::cout << std::setw(10) << cutLettersToTen(contact[i - 1].getNickname()) << "|" << std::endl;
+        std::cout << std::setw(10) << i + 1 << "|";
+        std::cout << std::setw(10) << cutLettersToTen(contact[i].getFirstName()) << "|";
+        std::cout << std::setw(10) << cutLettersToTen(contact[i].getLastName()) << "|";
+        std::cout << std::setw(10) << cutLettersToTen(contact[i].getNickname()) << "|" << std::endl;
         std::cout << "──────────────────────────────────────────────────────" << std::endl;
     }
 }
