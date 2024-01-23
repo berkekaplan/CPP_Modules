@@ -26,7 +26,7 @@ int main(void)
             break ;
         }
         else
-            std::cout << "This command dosen't exist." << std::endl;
+            std::cout << "This command doesn't exist." << std::endl;
     }
     return (0);
 }

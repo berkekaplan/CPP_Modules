@@ -87,7 +87,7 @@ int PhoneBook::searchContact(void)
     if (i <= 0 || i > 8)
     {
         std::cout << "Wrong input!" << std::endl;
-        std::cin.ignore();
+        std::cin.clear();
     }
     else
     {
