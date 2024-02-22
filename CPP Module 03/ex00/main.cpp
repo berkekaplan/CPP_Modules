@@ -2,8 +2,8 @@
 
 int main()
 {
-    ClapTrap c1("SOVA");
-    ClapTrap c2("JETT");
+    ClapTrap c1("C1");
+    ClapTrap c2("C2");
     c2.takeDamage(100);
     c2.beRepaired(10);
 
@@ -11,5 +11,5 @@ int main()
     c1.beRepaired(10);
 
     for(int i = 0; i < 10; i++)
-        c1.attack("Valorant Ulti Fight");
+        c1.attack("grenade");
 }
