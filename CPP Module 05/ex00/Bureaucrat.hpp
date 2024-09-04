@@ -3,7 +3,6 @@
 #include <string>
 #include <iostream>
 #include <exception>
-#include <cwctype>
 
 class Bureaucrat {
     private:
