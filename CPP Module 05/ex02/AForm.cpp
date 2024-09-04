@@ -58,7 +58,7 @@ std::string AForm::getIsSigned(void) const {
 }
 
 void AForm::beSigned(Bureaucrat &b) {
-    if (b.getGrade() <= this->getGradeToSign()ü)
+    if (b.getGrade() <= this->getGradeToSign())
         this->_isSigned = true;
 }
 
