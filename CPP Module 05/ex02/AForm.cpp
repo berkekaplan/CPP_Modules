@@ -17,13 +17,13 @@ AForm::AForm(std::string name,
            int reqGtoSign,
            int reqGtoExec) : 
            _name(name),
-           _isSigned(false) {
-    if (reqGtoExec < 1 || reqGtoSign < 1)
+           _isSigned(false), 
+           _requiredGradeToSign(reqGtoSign),
+           _requiredGradeToExecute(reqGtoExec) {
+    if (_requiredGradeToExecute < 1 || _requiredGradeToSign < 1)
         throw GradeTooHighException();
-    else if (reqGtoExec > 150 || reqGtoSign > 150)
+    else if (_requiredGradeToExecute > 150 || _requiredGradeToSign > 150)
         throw GradeTooLowException();
-    _requiredGradeToSign = reqGtoSign;
-    _requiredGradeToExecute = reqGtoExec;
 }
 
 AForm::AForm(const AForm& copy) : _name(copy.getName()),
@@ -60,6 +60,8 @@ std::string AForm::getIsSigned(void) const {
 void AForm::beSigned(Bureaucrat &b) {
     if (b.getGrade() <= this->getGradeToSign())
         this->_isSigned = true;
+    else
+        throw GradeTooHighException();
 }
 
 void AForm::execute(const Bureaucrat& executor) const {

@@ -9,8 +9,8 @@ class Form {
     private:
         const std::string _name;
         bool _isSigned;
-        const unsigned int _requiredGradeToSign;
-        const unsigned int _requiredGradeToExecute;
+        const int _requiredGradeToSign;
+        const int _requiredGradeToExecute;
     public:
         Form(void);
         ~Form(void);

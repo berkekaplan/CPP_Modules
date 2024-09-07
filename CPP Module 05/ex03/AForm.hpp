@@ -9,8 +9,8 @@ class AForm {
     private:
         const std::string _name;
         bool _isSigned;
-        const unsigned int _requiredGradeToSign;
-        const unsigned int _requiredGradeToExecute;
+        const int _requiredGradeToSign;
+        const int _requiredGradeToExecute;
     public:
         AForm(void);
         virtual ~AForm(void);
