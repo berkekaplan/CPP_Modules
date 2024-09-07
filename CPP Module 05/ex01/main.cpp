@@ -16,12 +16,10 @@ int main()
         try {
         Bureaucrat a("Mary Jane", 20);
         Form f("Document Form", 20, 10);
-        Form l(f);
 
         std::cout << f;
         a.signForm(f);
         std::cout << f;
-        std::cout << l;
         }
         catch (std::exception &e) {
             std::cout << "Exception caught: " << e.what() << std::endl;
