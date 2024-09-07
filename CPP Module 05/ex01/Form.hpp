@@ -9,8 +9,8 @@ class Form {
     private:
         const std::string _name;
         bool _isSigned;
-        const size_t _requiredGradeToSign;
-        const size_t _requiredGradeToExecute;
+        const unsigned int _requiredGradeToSign;
+        const unsigned int _requiredGradeToExecute;
     public:
         Form(void);
         ~Form(void);
@@ -21,8 +21,8 @@ class Form {
         Form(const Form& copy);
         Form &operator=(const Form& copy);
         std::string getName(void) const;
-        size_t getGradeToSign(void) const;
-        size_t getGradeToExec(void) const;
+        unsigned int getGradeToSign(void) const;
+        unsigned int getGradeToExec(void) const;
         std::string getIsSigned(void) const;
         void beSigned(Bureaucrat& b);
         class GradeTooHighException: public std::exception {

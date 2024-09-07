@@ -9,8 +9,8 @@ class AForm {
     private:
         const std::string _name;
         bool _isSigned;
-        const size_t _requiredGradeToSign;
-        const size_t _requiredGradeToExecute;
+        const unsigned int _requiredGradeToSign;
+        const unsigned int _requiredGradeToExecute;
     public:
         AForm(void);
         virtual ~AForm(void);
@@ -21,8 +21,8 @@ class AForm {
         AForm(const AForm& copy);
         AForm &operator=(const AForm& copy);
         std::string getName(void) const;
-        size_t getGradeToSign(void) const;
-        size_t getGradeToExec(void) const;
+        unsigned int getGradeToSign(void) const;
+        unsigned int getGradeToExec(void) const;
         std::string getIsSigned(void) const;
         void beSigned(Bureaucrat& b);
         void execute(const Bureaucrat& executor) const;

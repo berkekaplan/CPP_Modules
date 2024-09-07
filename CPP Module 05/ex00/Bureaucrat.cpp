@@ -6,7 +6,7 @@ Bureaucrat::~Bureaucrat(void) {}
 
 Bureaucrat::Bureaucrat(std::string name) : _name(name), _grade(150) {}
 
-Bureaucrat::Bureaucrat(std::string name, size_t grade) : _name(name) {
+Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name) {
     setGrade(grade);
 }
 
@@ -25,7 +25,7 @@ std::string Bureaucrat::getName(void) const {
     return this->_name;
 }
 
-size_t Bureaucrat::getGrade(void) const {
+unsigned int Bureaucrat::getGrade(void) const {
     return this->_grade;
 }
 

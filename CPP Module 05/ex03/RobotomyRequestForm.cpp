@@ -19,7 +19,7 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm& c
 
 void RobotomyRequestForm::specificExecute(void) const {
     std::srand(time(0));
-    size_t t = std::rand();
+    unsigned int t = std::rand();
     std::cout << "*DRILLING NOISES*" << std::endl;
     if (t % 2 == 0)
         std::cout << _target << " has been robotomized!" << std::endl;

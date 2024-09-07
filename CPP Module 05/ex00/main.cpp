@@ -20,7 +20,7 @@ int main()
 
     try {
     Bureaucrat a("Taylor", 5); 
-        for (size_t i = 0; i < 5; ++i) {
+        for (unsigned int i = 0; i < 5; ++i) {
             std::cout << a << std::endl;
             a.increaseGrade();
         }

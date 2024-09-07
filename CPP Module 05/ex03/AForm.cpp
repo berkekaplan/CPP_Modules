@@ -17,13 +17,13 @@ AForm::AForm(std::string name,
            int reqGtoSign,
            int reqGtoExec) : 
            _name(name),
-           _isSigned(false),
-           _requiredGradeToSign(reqGtoSign),
-           _requiredGradeToExecute(reqGtoExec) {
+           _isSigned(false) {
     if (reqGtoExec < 1 || reqGtoSign < 1)
         throw GradeTooHighException();
     else if (reqGtoExec > 150 || reqGtoSign > 150)
         throw GradeTooLowException();
+    _requiredGradeToSign = reqGtoSign;
+    _requiredGradeToExecute = reqGtoExec;
 }
 
 AForm::AForm(const AForm& copy) : _name(copy.getName()),
@@ -43,11 +43,11 @@ std::string AForm::getName(void) const {
     return _name;
 }
 
-size_t AForm::getGradeToSign(void) const {
+unsigned int AForm::getGradeToSign(void) const {
     return _requiredGradeToSign;
 }
 
-size_t AForm::getGradeToExec(void) const {
+unsigned int AForm::getGradeToExec(void) const {
     return _requiredGradeToExecute;
 }
 

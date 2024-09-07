@@ -7,11 +7,13 @@ Form::~Form(void) {}
 
 Form::Form(std::string name): _name(name), _isSigned(false), _requiredGradeToSign(150), _requiredGradeToExecute(150) {}
 
-Form::Form(std::string name, int reqGtoSign, int reqGtoExec) : _name(name), _isSigned(false), _requiredGradeToSign(reqGtoSign), _requiredGradeToExecute(reqGtoExec){
+Form::Form(std::string name, int reqGtoSign, int reqGtoExec) : _name(name), _isSigned(false) {
     if (reqGtoExec < 1 || reqGtoSign < 1)
         throw GradeTooHighException();
     else if (reqGtoExec > 150 || reqGtoSign > 150)
         throw GradeTooLowException();
+    _requiredGradeToSign = reqGtoSign;
+    _requiredGradeToExecute = reqGtoExec;
 }
 
 Form::Form(const Form& copy) : _name(copy.getName()), _requiredGradeToSign(getGradeToSign()), _requiredGradeToExecute(getGradeToExec()) {
@@ -29,11 +31,11 @@ std::string Form::getName(void) const {
     return _name;
 }
 
-size_t Form::getGradeToSign(void) const {
+unsigned int Form::getGradeToSign(void) const {
     return _requiredGradeToSign;
 }
 
-size_t Form::getGradeToExec(void) const {
+unsigned int Form::getGradeToExec(void) const {
     return _requiredGradeToExecute;
 }
 
