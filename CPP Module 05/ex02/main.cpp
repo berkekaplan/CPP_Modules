@@ -29,12 +29,12 @@ int main()
         ShrubberyCreationForm scf("shrub");
         a.executeForm(scf);
         a.signAForm(scf);
-        for (unsigned int i = 0; i < 10; ++i) {
+        for (int i = 0; i < 10; ++i) {
             a.increaseGrade();
         }
         a.signAForm(scf);
         a.executeForm(scf);
-        for (unsigned int i = 0; i < 10; ++i) {
+        for (int i = 0; i < 10; ++i) {
             a.increaseGrade();
         }
         a.executeForm(scf);

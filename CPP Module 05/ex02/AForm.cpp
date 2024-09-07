@@ -43,11 +43,11 @@ std::string AForm::getName(void) const {
     return _name;
 }
 
-unsigned int AForm::getGradeToSign(void) const {
+int AForm::getGradeToSign(void) const {
     return _requiredGradeToSign;
 }
 
-unsigned int AForm::getGradeToExec(void) const {
+int AForm::getGradeToExec(void) const {
     return _requiredGradeToExecute;
 }
 

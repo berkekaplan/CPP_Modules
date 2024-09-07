@@ -21,8 +21,8 @@ class AForm {
         AForm(const AForm& copy);
         AForm &operator=(const AForm& copy);
         std::string getName(void) const;
-        unsigned int getGradeToSign(void) const;
-        unsigned int getGradeToExec(void) const;
+        int getGradeToSign(void) const;
+        int getGradeToExec(void) const;
         std::string getIsSigned(void) const;
         void beSigned(Bureaucrat& b);
         void execute(const Bureaucrat& executor) const;

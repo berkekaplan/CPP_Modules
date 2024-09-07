@@ -29,11 +29,11 @@ std::string Form::getName(void) const {
     return _name;
 }
 
-unsigned int Form::getGradeToSign(void) const {
+int Form::getGradeToSign(void) const {
     return _requiredGradeToSign;
 }
 
-unsigned int Form::getGradeToExec(void) const {
+int Form::getGradeToExec(void) const {
     return _requiredGradeToExecute;
 }
 

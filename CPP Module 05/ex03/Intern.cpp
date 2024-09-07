@@ -45,7 +45,7 @@ AForm *Intern::makeForm(std::string name, std::string target) {
         &Intern::makeShrubberyCreation,
     };
     
-    for (unsigned int i = 0; i < 3; ++i) {
+    for (int i = 0; i < 3; ++i) {
         if (names[i] == name)
             return (this->*ptr[i])(target);
     }
