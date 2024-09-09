@@ -68,7 +68,7 @@ void AForm::execute(const Bureaucrat& executor) const {
     if (!_isSigned)
         throw FormNotSignedException();
     if (executor.getGrade() >= _requiredGradeToExecute)
-        throw GradeTooLowException();
+        throw GradeTooHighException();
     std::cout << executor.getName() << " executed " << _name << std::endl;
     specificExecute();
 }
