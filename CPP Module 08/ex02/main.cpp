@@ -29,7 +29,33 @@ int main()
         ++it;
     }
     std::stack<int> s(mstack);
+    
+    
+    std::cout << "\n\n";
+
+    MutantStack<int> kstack;
+
+    kstack.push(1);
+    kstack.push(2);
+    kstack.push(3);
+
+    std::cout << "iterator\n";
+
+    for (MutantStack<int>::iterator it = kstack.begin(); it != kstack.end(); ++it) {
+    std::cout << *it << std::endl;
+    }
+
+    std::cout << "reverse iterator\n";
+
+    for (MutantStack<int>::reverse_iterator rit = kstack.rbegin(); rit != kstack.rend(); ++rit) {
+    std::cout << *rit << std::endl;
+    }
+
+    std::cout << "const iterator\n";
+
+    for (MutantStack<int>::const_iterator cit = kstack.cbegin(); cit != kstack.cend(); ++cit) {
+    std::cout << *cit << std::endl;
+    }
+    
     return 0;
 }
-
-// Bu main PDF te hazır olarak verilmiş, test amaçlı bir maindir.

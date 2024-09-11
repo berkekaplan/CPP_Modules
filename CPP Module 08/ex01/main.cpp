@@ -14,5 +14,14 @@ int main()
 	std::cout << sp.shortestSpan() << std::endl;
 	std::cout << sp.longestSpan() << std::endl;
 
+	std::cout << "********************"	<< std::endl;
+
+	Span sp2 = Span(10000);
+	std::vector<int> numbers;
+	for (int i = 1; i <= 10000; i++)
+		numbers.push_back(i);
+	sp2.fill(numbers.begin(), numbers.end());
+	sp2.print();
+
 	return 0;
 }
