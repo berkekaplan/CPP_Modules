@@ -9,7 +9,7 @@ OBJS    = $(SRCS:.cpp=.o)
 all: coffee $(NAME)
 
 $(NAME): $(OBJS)
-	@echo "\033[3;35m 	- Coding merge-insert sort algorithm with ahkalama \033[m\n"
+	@echo "\033[3;35m 	- Coding merge-insert sort algorithm with mkaplan \033[m\n"
 	@ $(CC) $(FLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.cpp $(HEADER)

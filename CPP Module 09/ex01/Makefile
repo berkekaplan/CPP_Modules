@@ -9,7 +9,7 @@ OBJS    = $(SRCS:.cpp=.o)
 all: coffee $(NAME)
 
 $(NAME): $(OBJS)
-	@echo "\033[1;3;30m\n  Reverse Polish Notation by ahkalama\033[m\n"
+	@echo "\033[1;3;30m\n  Reverse Polish Notation by mkaplan\033[m\n"
 	@ $(CC) $(FLAGS) $(OBJS) -o $(NAME)
 	@echo "\033[3;30m		 Done\033[m\n"
 

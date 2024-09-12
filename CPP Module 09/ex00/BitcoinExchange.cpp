@@ -155,10 +155,8 @@ bool Bitcoin::checkvalue(std::string date)
 double Bitcoin::setContainer_calculate(std::string date)
 {
 	std::map<std::string, double>::iterator m;
-	int i = 0;
 	m = Bitcoin::_data.find(date);
 	if(m == Bitcoin::_data.end())
 		m = --Bitcoin::_data.upper_bound(date);
-	i++;
 	return (m->second);
 }
